@@ -51,34 +51,34 @@ vsg_copy_imgui_headers(
         ${VSGIMGUI_SOURCE_DIR}/src/implot/implot_internal.h
 )
 
-vsg_add_target_clang_format(
-    FILES
-        include/vsgImGui/RenderImGui.h
-        include/vsgImGui/SendEventsToImGui.h
-        include/vsgImGui/Texture.h
-        src/vsgImGui/*.cpp
-)
-vsg_add_target_clobber()
-vsg_add_target_cppcheck(
-    FILES
-        include/vsgImGui/*.h
-        src/vsgImGui/*.cpp
-)
-vsg_add_target_docs(
-    FILES
-        include
-)
-vsg_add_target_uninstall()
+# vsg_add_target_clang_format(
+#     FILES
+#         include/vsgImGui/RenderImGui.h
+#         include/vsgImGui/SendEventsToImGui.h
+#         include/vsgImGui/Texture.h
+#         src/vsgImGui/*.cpp
+# )
+# vsg_add_target_clobber()
+# vsg_add_target_cppcheck(
+#     FILES
+#         include/vsgImGui/*.h
+#         src/vsgImGui/*.cpp
+# )
+# vsg_add_target_docs(
+#     FILES
+#         include
+# )
+# vsg_add_target_uninstall()
 
 
-if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
+# if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
 
-    vsg_add_option_maintainer(
-        PREFIX vsgImGui
-        RCLEVEL VSGIMGUI_RELEASE_CANDIDATE
-    )
+#     vsg_add_option_maintainer(
+#         PREFIX vsgImGui
+#         RCLEVEL VSGIMGUI_RELEASE_CANDIDATE
+#     )
 
-endif()
+# endif()
 
 # source directory for main vsgImGui library
 add_subdirectory(src)
