@@ -131,6 +131,7 @@ void RenderImGui::_init(
     // size is set to something, to prevent assertions
     // in ImGui::newFrame.
     ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     io.DisplaySize.x = imageSize.width;
     io.DisplaySize.y = imageSize.height;
 
